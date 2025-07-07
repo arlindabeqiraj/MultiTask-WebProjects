@@ -56,3 +56,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Exercise 4: Company logos slider
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("companySlider");
+  const logos = track.querySelectorAll("img");
+  const logoCount = logos.length;
+  const gap = 40;
+
+  let currentIndex = 0;
+  const visibleCount = 5;
+  const slideInterval = 3000;
+
+  const slideWidth = logos[0].offsetWidth + gap;
+
+  function updateSlider() {
+    const translateX = -(slideWidth * currentIndex);
+    track.style.transform = `translateX(${translateX}px)`;
+  }
+
+  function slideRight() {
+    currentIndex++;
+    if (currentIndex > logoCount - visibleCount) {
+      currentIndex = 0;
+    }
+    updateSlider();
+  }
+
+  function slideLeft() {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = logoCount - visibleCount;
+    }
+    updateSlider();
+  }
+
+  // Auto slide
+  setInterval(() => {
+    slideRight();
+  }, slideInterval);
+
+  // Eksporto funksionet për butonat
+  window.slideLeft = slideLeft;
+  window.slideRight = slideRight;
+});

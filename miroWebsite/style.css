@@ -1058,3 +1058,40 @@ a {
     transform: rotate(360deg);
   }
 }
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: auto;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  color: rgb(150, 150, 150);
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 1200px;
+  max-width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-track img {
+  height: 80px;
+  width: auto;
+  flex-shrink: 0;
+  user-select: none;
+}
