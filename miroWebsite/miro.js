@@ -279,3 +279,31 @@ function showPopup(company) {
     popup.remove();
   });
 }
+
+// Exercise 6
+document.addEventListener("DOMContentLoaded", () => {
+  const sortBtn = document.getElementById("sortTestimonialsBtn");
+  const wrapper = document.getElementById("testimonialWrapper");
+
+  const originalCards = Array.from(
+    wrapper.querySelectorAll(".testimonial-card")
+  );
+  let isSorted = false;
+
+  sortBtn.addEventListener("click", () => {
+    wrapper.innerHTML = "";
+
+    if (!isSorted) {
+      const sorted = [...originalCards].sort((a, b) =>
+        a.dataset.name.toLowerCase().localeCompare(b.dataset.name.toLowerCase())
+      );
+      sorted.forEach((card) => wrapper.appendChild(card));
+      sortBtn.textContent = "Reset";
+    } else {
+      originalCards.forEach((card) => wrapper.appendChild(card));
+      sortBtn.textContent = "Sort";
+    }
+
+    isSorted = !isSorted;
+  });
+});

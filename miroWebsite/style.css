@@ -1132,3 +1132,17 @@ a {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+#sortTestimonialsBtn {
+  margin: 20px 0;
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#sortTestimonialsBtn:hover {
+  background-color: #e0e0e0;
+}
