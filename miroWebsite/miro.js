@@ -13,3 +13,27 @@ function showToast(message, type = "success") {
     });
   }, 4000);
 }
+
+// --- Exercise 2: Loading Spinner on Button Click ---
+function showLoading(button, duration = 3000) {
+  const originalText = button.innerHTML;
+
+  // Zëvendëson tekstin me spinner
+  button.innerHTML = `<span class="spinner"></span>`;
+  button.disabled = true;
+
+  setTimeout(() => {
+    button.innerHTML = originalText;
+    button.disabled = false;
+  }, duration);
+}
+
+// Testim manual për butonin "Sign up free →"
+document.addEventListener("DOMContentLoaded", () => {
+  const testBtn = document.querySelector(".email-form button");
+  if (testBtn) {
+    testBtn.addEventListener("click", () => {
+      showLoading(testBtn);
+    });
+  }
+});
