@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .custom-banner {
+    background-image: url("../img/image.png");
+    background-size: cover;
+    background-position: center;
+  }
+}

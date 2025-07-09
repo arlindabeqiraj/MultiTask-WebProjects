@@ -1,0 +1,30 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./miro.js"],
+  safelist: [
+    "bg-green-500",
+    "bg-red-500",
+    "text-white",
+    "rounded",
+    "shadow-md",
+    "animate-spin",
+    "toast",
+    "success",
+    "error",
+    "spinner",
+    "company-popup",
+    "popup-content",
+    "close-btn",
+    "testimonial-card",
+    "w-[150px]",
+    "h-[80px]",
+    "object-contain",
+    "filter",
+    "brightness-0",
+    "invert",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};

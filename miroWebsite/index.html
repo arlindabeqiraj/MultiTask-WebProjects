@@ -4,449 +4,918 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miro Landing Clone</title>
-    <link rel="stylesheet" href="style.css" />
+    <link href="dist/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <header class="navbar">
-      <div class="nav-left">
-        <span class="logo">miro</span>
+  <body class="bg-white text-[#1d1d1d] font-sans">
+    <header
+      class="flex justify-between items-center px-[60px] py-5 border-b border-[#eee]"
+    >
+      <div class="flex items-center">
+        <span class="text-2xl font-bold mr-8">miro</span>
         <nav>
-          <ul>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Solutions</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Enterprise</a></li>
-            <li><a href="#">Pricing</a></li>
+          <ul class="flex gap-5 list-none">
+            <li><a href="#" class="text-black">Product</a></li>
+            <li><a href="#" class="text-black">Solutions</a></li>
+            <li><a href="#" class="text-black">Resources</a></li>
+            <li><a href="#" class="text-black">Enterprise</a></li>
+            <li><a href="#" class="text-black">Pricing</a></li>
           </ul>
         </nav>
       </div>
-      <div class="nav-right">
-        <a href="#">EN</a>
-        <a href="#">Contact Sales</a>
-        <a href="#">Login</a>
-        <a class="btn-primary" href="#">Sign up free →</a>
+      <div class="flex items-center gap-5">
+        <a href="#" class="text-black">EN</a>
+        <a href="#" class="text-black">Contact Sales</a>
+        <a href="#" class="text-black">Login</a>
+        <a href="#" class="bg-[#4262ff] text-white px-5 py-2 rounded-full"
+          >Sign up free →</a
+        >
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Take ideas from <br /><span class="bold">better to best</span></h1>
-        <p>
+    <section
+      class="flex flex-wrap max-w-[1200px] mx-auto px-[60px] py-[100px] gap-20 items-start"
+    >
+      <div class="flex-1">
+        <h1
+          class="text-[45px] font-extrabold leading-tight text-[#050038] mb-5"
+        >
+          Take ideas from <br />
+          <span class="font-extrabold">better to best</span>
+        </h1>
+        <p class="text-lg text-black mb-8">
           Miro is your team's visual platform to connect, <br />
           collaborate, and create — together.
         </p>
-        <div class="email-form">
-          <input type="email" placeholder="Enter your work email" />
-          <button>Sign up free →</button>
+        <div class="flex flex-col gap-3 max-w-[500px]">
+          <input
+            type="email"
+            placeholder="Enter your work email"
+            class="px-5 py-4 text-base border border-[#ccc] rounded-full"
+          />
+          <button
+            class="px-5 py-4 text-lg bg-[#4262ff] text-white rounded-full cursor-pointer"
+          >
+            Sign up free →
+          </button>
         </div>
 
-        <p class="note">Collaborate with your team within minutes</p>
-
-        <div class="reviews">
-          <img src="img/review2.png" alt="" />
+        <p class="text-xs text-[#b0b0d1] mt-3 leading-snug font-normal">
+          Collaborate with your team within minutes
+        </p>
+        <div
+          class="mt-8 flex items-center gap-3 bg-[#f7f7fb] px-5 py-3 rounded-lg w-fit text-sm text-[#333]"
+        >
+          <img src="img/review2.png" alt="" class="h-10" />
         </div>
       </div>
-      <div class="preview">
-        <img src="img/img1.png" alt="Miro board mockup" />
-      </div>
-    </section>
-
-    <section class="trusted">
-      <p>Trusted by 45M+ users</p>
-      <br /><br />
-      <div class="slider-wrapper">
-  <div class="slider-container">
-    <div class="slider-track" id="companySlider">
-      <img src="img/logo1.png" alt="1" data-id="1" />
-      <img src="img/logo2.png" alt="2" data-id="2"/>
-      <img src="img/logo3.png" alt="3" data-id="3"/>
-      <img src="img/logo4.png" alt="4" data-id="4"/>
-      <img src="img/logo5.png" alt="5" data-id="5"/>
-      <img src="img/logo6.png" alt="6" data-id="6"/>
-      <img src="img/logo7.png" alt="7" data-id="7"/>
-      <img src="img/logo8.png" alt="8" data-id="8"/>
-      <img src="img/logo9.png" alt="9" data-id="9"/>
-      <img src="img/logo10.png" alt="10" data-id="10"/>
-      <img src="img/logo11.png" alt="11" data-id="11"/>
-      <img src="img/logo12.png" alt="12" data-id="12"/>
-      <img src="img/logo13.png" alt="13" data-id="13"/>
-      <img src="img/logo14.png" alt="14" data-id="14"/>
-      <img src="img/logo15.svg" alt="15" data-id="15"/>
-      <img src="img/logo16.png" alt="16" data-id="16"/>
-      <img src="img/logo17.png" alt="17" data-id="17"/>
-      <img src="img/logo18.png" alt="18" data-id="18"/>
-      <img src="img/logo19.png" alt="19" data-id="19"/>
-      <img src="img/logo20.png" alt="20" data-id="20"/>
-    </div>
-  </div>
-
-  
-</div>
-
-
-</div>
-
-    </section>
-
-    <section class="features">
-      <div class="features-top">
-        <h2>Collaborate without<br />constraints</h2>
+      <div class="flex-[1.3] flex justify-end">
         <img
-          src="img/youridea.png"
-          alt="Your idea starts here"
-          class="tagline-img"
+          src="img/img1.png"
+          alt="Miro board mockup"
+          class="w-full max-w-[700px] h-[450px]"
         />
       </div>
+    </section>
 
-      <div class="features-columns">
-        <div class="feature">
-          <h3>Free forever</h3>
-          <p>
+    <section class="w-full py-24 px-10 text-center bg-white text-gray-500">
+      <p class="text-lg font-medium mb-12">Trusted by 45M+ users</p>
+      <div class="slider-wrapper mx-auto overflow-hidden w-[1040px]">
+        <div id="companySlider" class="flex gap-[40px] w-max">
+          <img
+            src="img/logo1.png"
+            data-id="1"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo2.png"
+            data-id="2"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo3.png"
+            data-id="3"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo4.png"
+            data-id="4"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo5.png"
+            data-id="5"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo6.png"
+            data-id="6"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo7.png"
+            data-id="7"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo8.png"
+            data-id="8"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo9.png"
+            data-id="9"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo10.png"
+            data-id="10"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo11.png"
+            data-id="11"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo12.png"
+            data-id="12"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo13.png"
+            data-id="13"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo14.png"
+            data-id="14"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo15.png"
+            data-id="15"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo16.png"
+            data-id="16"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo17.png"
+            data-id="17"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo18.png"
+            data-id="18"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo19.png"
+            data-id="19"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+          <img
+            src="img/logo20.png"
+            data-id="20"
+            class="w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-14 max-w-6xl mx-auto text-center">
+      <h2 class="text-[45px] font-extrabold text-[#050038] leading-tight mb-10">
+        Collaborate without <br />constraints
+      </h2>
+
+      <div class="flex flex-wrap justify-between gap-12 text-left mb-10">
+        <div class="flex-1 min-w-[280px] max-w-sm">
+          <h3 class="text-xl font-extrabold text-[#050038] mb-2">
+            Free forever
+          </h3>
+          <p class="text-[#444] leading-relaxed mb-2">
             Our free plan gives you unlimited team members, 3 boards, and 300+
             expert-made templates. Signing up with your work email lets you
-            bring in your team faster. See our <a href="#">pricing plans</a> for
-            more features.
+            bring in your team faster. See our
+            <a href="#" class="text-[#4568fd] underline">pricing plans</a>
+            for more features.
           </p>
         </div>
-        <div class="feature">
-          <h3>Easy integrations</h3>
-          <p>
+        <div class="flex-1 min-w-[280px] max-w-sm">
+          <h3 class="text-xl font-extrabold text-[#050038] mb-2">
+            Easy integrations
+          </h3>
+          <p class="text-[#444] leading-relaxed mb-2">
             Miro has 100+ powerful integrations with tools you already use like
-            G Suite, Slack, and Jira, so your workflow is seamless. View the
-            full list in our <a href="#">Marketplace</a>.
+            G Suite, Slack, and Jira. View the full list in our
+            <a href="#" class="text-[#4568fd] underline">Marketplace</a>.
           </p>
         </div>
-        <div class="feature">
-          <h3>Security first</h3>
-          <p>
+        <div class="flex-1 min-w-[280px] max-w-sm">
+          <h3 class="text-xl font-extrabold text-[#050038] mb-2">
+            Security first
+          </h3>
+          <p class="text-[#444] leading-relaxed mb-2">
             We treat your data like you would — with the utmost care. We follow
             industry-leading security standards and give you tools to protect
             intellectual property. Learn more at our
-            <a href="#">Trust Center</a>.
+            <a href="#" class="text-[#4568fd] underline">Trust Center</a>.
           </p>
         </div>
       </div>
 
-      <div class="features-btn">
-        <button>Sign up free →</button>
-      </div>
+      <a
+        href="#"
+        class="inline-block px-8 py-3 bg-[#4568fd] text-white rounded-full text-base font-medium hover:bg-[#274cfc] transition"
+      >
+        Sign up free →
+      </a>
     </section>
 
-    <section class="work-together">
-  <div class="work-text">
-    <h2>Work together,<br />wherever you work</h2>
-    <p>
-      In the office, remote, or a mix of the two, with Miro, your team can
-      connect, collaborate, and co-create in one space no matter where you
-      are.
-    </p>
-    <a href="#" class="learn-more">Learn more →</a>
-  </div>
-
-  <div class="work-image-side">
-    <img src="img/together.png" alt="Collaboration visual" />
-  </div>
-</section>
-
-
-
-
-
-
-    <section class="section">
-      <div class="image-container">
-        <img src="img/vector2.png" alt="Miro integrations" />
+    <section
+      class="flex flex-wrap items-center justify-center gap-24 px-10 py-20"
+    >
+      <div class="w-[450px] h-[450px] relative">
+        <img
+          src="img/vector2.png"
+          alt="Miro integrations"
+          class="w-full h-full object-cover rounded-lg"
+        />
       </div>
-      <div class="text-container">
-        <h1>
+      <div class="max-w-md">
+        <h1 class="text-[45px] font-extrabold text-[#0f0f3d] mb-6 leading-snug">
           Connect <br />
           your tools,<br />close your tabs
         </h1>
-        <p>
+        <p class="text-lg text-[#555] leading-relaxed mb-6">
           Whether you want to edit your Google Docs, resolve Jira issues, or
           collaborate over Zoom, Miro has 100+ integrations with tools you
           already use and love.
         </p>
-        <a href="#">Learn more →</a>
+        <a href="#" class="text-[#4568fd] text-base font-bold hover:underline"
+          >Learn more →</a
+        >
       </div>
     </section>
 
-    <section class="feature-banner">
-      <div class="feature-content">
-        <h2>The Ways</h2>
-        <h3>We Work</h3>
-        <p>How has our relationship with work changed?</p>
-        <a href="#">View the report →</a>
+    <section
+      class="relative custom-banner rounded-2xl shadow-lg max-w-[1100px] mx-auto my-16 px-5 py-16 h-[320px] flex items-center justify-end"
+    >
+      <div class="p-8 rounded-xl max-w-sm text-center">
+        <h2 class="text-xl text-[#050038] font-semibold">The Ways</h2>
+        <h3 class="text-xl text-[#050038] font-bold mb-2">We Work</h3>
+        <p class="text-sm text-[#444] mb-4">
+          How has our relationship with work changed?
+        </p>
+        <a
+          href="#"
+          class="inline-block bg-[#4262ff] text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-[#2e4be5] transition"
+          >View the report →</a
+        >
       </div>
     </section>
 
-    <section class="work-section">
-      <h2>Built for the way you work</h2>
-      <div class="work-tabs">
-        <button class="tab active">Brainstorming</button>
-        <button class="tab">Diagramming</button>
-        <button class="tab">Meetings & Workshops</button>
-        <button class="tab">Scrum Events</button>
-        <button class="tab">Mapping</button>
-        <button class="tab">Research & Design</button>
-        <button class="tab">Strategic Planning</button>
+    <section class="px-10 py-20 max-w-[1100px] mx-auto">
+      <h2 class="text-4xl font-extrabold text-[#050038] mb-8">
+        Built for the way you work
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-[#eef1ff] text-[#4262ff] text-sm font-medium"
+        >
+          Brainstorming
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+        >
+          Diagramming
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+        >
+          Meetings & Workshops
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+        >
+          Scrum Events
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+        >
+          Mapping
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+        >
+          Research & Design
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+        >
+          Strategic Planning
+        </button>
       </div>
 
-      <div class="work-content">
-        <div class="work-text">
-          <p>Brainstorming</p>
-          <p>
+      <div class="flex flex-wrap gap-16 items-start">
+        <div class="flex-1 min-w-[280px]">
+          <p class="text-lg font-semibold text-[#050038] mb-4">Brainstorming</p>
+          <p class="text-base text-[#5f5f72] mb-4">
             Unleash creative ideas and build on them with the help of sticky
             notes, images, mind maps, videos, drawing capabilities — the list
             goes on.
           </p>
-          <a href="#" class="learn-more">Learn more →</a>
+          <a href="#" class="text-[#4262ff] text-sm font-medium"
+            >Learn more →</a
+          >
         </div>
-        <div class="work-image">
-          <img src="img/brainstorm.png"?>
+        <div class="flex-1 min-w-[300px] text-center">
+          <img
+            src="img/brainstorm.png"
+            alt="Brainstorming"
+            class="max-w-full h-auto"
+          />
+        </div>
       </div>
     </section>
 
-    <section class="teams-section">
-  <h2 class="teams-title">Built for all kinds of teams</h2>
+    <section class="px-10 py-20 max-w-[1100px] mx-auto">
+      <h2 class="text-4xl font-extrabold text-[#050038] mb-8 text-left">
+        Built for all kinds of teams
+      </h2>
 
-  <div class="teams-tabs">
-    <button class="tab active">UX & Design</button>
-    <button class="tab">Marketing</button>
-    <button class="tab">Product Management</button>
-    <button class="tab">Engineering</button>
-    <button class="tab">Consultants</button>
-    <button class="tab">Agile Coaches</button>
-    <button class="tab">Sales</button>
-  </div>
+      <div class="flex flex-nowrap justify-between gap-2 mb-12 overflow-x-auto">
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-[#eef1ff] text-[#4262ff] text-sm font-medium flex-1 min-w-max text-center"
+        >
+          UX & Design
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+        >
+          Marketing
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+        >
+          Product Management
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+        >
+          Engineering
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+        >
+          Consultants
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+        >
+          Agile Coaches
+        </button>
+        <button
+          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+        >
+          Sales
+        </button>
+      </div>
 
-  <div class="teams-content">
-    <div class="teams-text">
-      <ul class="feature-list">
-        <li>Build low-fi wireframes</li>
-        <li>Involve stakeholders in the design process</li>
-        <li>Run engaging design workshops</li>
-      </ul>
-      <a href="#" class="learn-link">Learn more →</a>
+      <div class="flex flex-wrap justify-between gap-16 items-start">
+        <div class="flex-1 min-w-[280px]">
+          <ul class="space-y-3 mb-6">
+            <li
+              class="relative pl-6 text-[16px] text-[#5f5f72] before:content-['✔'] before:absolute before:left-0 before:text-[#4262ff]"
+            >
+              Build low-fi wireframes
+            </li>
+            <li
+              class="relative pl-6 text-[16px] text-[#5f5f72] before:content-['✔'] before:absolute before:left-0 before:text-[#4262ff]"
+            >
+              Involve stakeholders in the design process
+            </li>
+            <li
+              class="relative pl-6 text-[16px] text-[#5f5f72] before:content-['✔'] before:absolute before:left-0 before:text-[#4262ff]"
+            >
+              Run engaging design workshops
+            </li>
+          </ul>
 
-      <div class="integration">
-  <span>Integrate your favorite tools</span>
-  <div class="tool-icons">
-    <img src="img/tools.png" alt="Tool Logos" />
-  </div>
-</div>
+          <a href="#" class="text-[#4262ff] text-sm font-medium hover:underline"
+            >Learn more →</a
+          >
 
-    </div>
+          <div class="mt-6 text-sm text-gray-600">
+            <span class="block mb-2">Integrate your favorite tools</span>
+            <img src="img/tools.png" alt="Tool Logos" class="max-w-[160px]" />
+          </div>
+        </div>
 
-    <div class="teams-image">
-      <img src="img/teams.png" alt="Team Collaboration Image" />
-    </div>
-  </div>
-</section>
-
-<section class="trust-section">
-  <h2>Why companies large<br>and small trust Miro</h2>
-  <a href="#" class="contact-link">Contact Sales to request a demo</a>
-
-  <div class="stats-grid">
-    <div class="stat-item">
-      <h3>ISO</h3>
-      <p>ISO-27001 enterprise-grade security compliant</p>
-    </div>
-    <div class="stat-item">
-      <h3>#1</h3>
-      <p>Visual Collaboration Platform on G2</p>
-    </div>
-    <div class="stat-item">
-      <h3>99%</h3>
-      <p>of the Fortune 100 are customers</p>
-    </div>
-    <div class="stat-item">
-      <h3>1,000+</h3>
-      <p>community- and expert-built templates</p>
-    </div>
-    <div class="stat-item">
-      <h3>45M+</h3>
-      <p>users around the world</p>
-    </div>
-    <div class="stat-item">
-      <h3>100+</h3>
-      <p>integrations with technology partners</p>
-    </div>
-  </div>
-</section>
-
-<section class="testimonials-section">
-  <h2>Loved by the world’s best teams</h2>
-  <a href="#" class="testimonial-button">See all customer stories →</a>
-
-  <!-- Butoni për sort -->
-  <button id="sortTestimonialsBtn">Sort by Company Name</button>
-
-  <div class="testimonial-grid" id="testimonialWrapper">
-    <div class="testimonial-card" data-name="vmware">
-      <h3>vmware</h3>
-      <p class="quote">“When the pandemic hit, those of us who thrive on in-person collaboration were worried that our creativity and productivity would suffer. Miro was the perfect tool to help us with collaboration, whiteboarding, and retrospectives while remote.”</p>
-      <div class="author">
-        <img src="img/profile1.png" alt="Roxanne Mustafa">
-        <div>
-          <strong>Roxanne Mustafa</strong><br>
-          <span>Design Team Lead at VMware</span>
+        <div class="flex-1 min-w-[300px] text-center">
+          <img
+            src="img/teams.png"
+            alt="Team Collaboration Image"
+            class="max-w-full h-auto rounded-lg shadow-md"
+          />
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="testimonial-card" data-name="DocuSign">
-      <h3>DocuSign</h3>
-      <p class="quote">“Miro helps solve one of the major gaps in product design: how to manage tasks across product designers whose projects are in different tools.”</p>
-      <br><br>
-      <div class="author">
-        <img src="img/profile2.png" alt="Jane Ashley">
+    <section class="bg-[#ffd82f] text-center px-10 py-24">
+      <h2
+        class="text-4xl md:text-5xl font-extrabold text-[#050038] leading-snug mb-6"
+      >
+        Why companies large<br />and small trust Miro
+      </h2>
+      <a
+        href="#"
+        class="inline-block text-[#050038] underline font-medium text-base mb-20"
+        >Contact Sales to request a demo</a
+      >
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 max-w-[1000px] mx-auto"
+      >
         <div>
-          <strong>Jane Ashley</strong><br>
-          <span>Head of Design at DocuSign</span>
+          <h3 class="text-[44px] font-black text-[#050038] mb-3">ISO</h3>
+          <p
+            class="text-base text-[#1d1d1d] max-w-[240px] mx-auto leading-relaxed"
+          >
+            ISO-27001 enterprise-grade security compliant
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[44px] font-black text-[#050038] mb-3">#1</h3>
+          <p
+            class="text-base text-[#1d1d1d] max-w-[240px] mx-auto leading-relaxed"
+          >
+            Visual Collaboration Platform on G2
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[44px] font-black text-[#050038] mb-3">99%</h3>
+          <p
+            class="text-base text-[#1d1d1d] max-w-[240px] mx-auto leading-relaxed"
+          >
+            of the Fortune 100 are customers
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[44px] font-black text-[#050038] mb-3">1,000+</h3>
+          <p
+            class="text-base text-[#1d1d1d] max-w-[240px] mx-auto leading-relaxed"
+          >
+            community- and expert-built templates
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[44px] font-black text-[#050038] mb-3">45M+</h3>
+          <p
+            class="text-base text-[#1d1d1d] max-w-[240px] mx-auto leading-relaxed"
+          >
+            users around the world
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[44px] font-black text-[#050038] mb-3">100+</h3>
+          <p
+            class="text-base text-[#1d1d1d] max-w-[240px] mx-auto leading-relaxed"
+          >
+            integrations with technology partners
+          </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="testimonial-card" data-name="frog">
-      <h3>frog</h3>
-      <p class="quote">“As we used Miro we moved from skepticism to belief to innovation, and now we have a tool that’s at the core of what we do and will continue to extend into the future.”</p>
-      <br><br>
-      <div class="author">
-        <img src="img/profile3.png" alt="Laura Baird">
-        <div>
-          <strong>Laura Baird</strong><br>
-          <span>Associate Design Director at frog</span>
+    <section class="bg-white text-center px-10 py-24">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-[#050038] mb-6">
+        Loved by the world’s best teams
+      </h2>
+      <a
+        href="#"
+        class="inline-block border border-[#4262ff] text-[#4262ff] px-6 py-2 rounded-full text-base font-medium mb-10 hover:bg-[#4262ff] hover:text-white transition-all"
+      >
+        See all customer stories →
+      </a>
+
+      <button
+        id="sortTestimonialsBtn"
+        class="mb-10 px-4 py-2 bg-gray-100 rounded-md font-medium hover:bg-gray-200 transition"
+      >
+        Sort by Company Name
+      </button>
+
+      <div
+        id="testimonialWrapper"
+        class="flex flex-wrap justify-center gap-10 max-w-[1200px] mx-auto"
+      >
+        <!-- Single Testimonial -->
+        <div
+          class="flex flex-col justify-between min-w-[300px] max-w-[340px] text-left bg-white"
+          data-name="vmware"
+        >
+          <div>
+            <h3 class="text-2xl font-extrabold text-[#050038] mb-4">vmware</h3>
+            <p class="text-[#444] text-base leading-relaxed mb-6">
+              “When the pandemic hit, those of us who thrive on in-person
+              collaboration were worried that our creativity and productivity
+              would suffer. Miro was the perfect tool to help us with
+              collaboration, whiteboarding, and retrospectives while remote.”
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img
+              src="img/profile1.png"
+              alt="Roxanne Mustafa"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-[#050038] text-sm font-semibold">
+                Roxanne Mustafa
+              </p>
+              <p class="text-sm text-[#5f5f72]">Design Team Lead at VMware</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="flex flex-col justify-between min-w-[300px] max-w-[340px] text-left bg-white"
+          data-name="DocuSign"
+        >
+          <div>
+            <h3 class="text-2xl font-extrabold text-[#050038] mb-4">
+              DocuSign
+            </h3>
+            <p class="text-[#444] text-base leading-relaxed mb-6">
+              “Miro helps solve one of the major gaps in product design: how to
+              manage tasks across product designers whose projects are in
+              different tools.”
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img
+              src="img/profile2.png"
+              alt="Jane Ashley"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-[#050038] text-sm font-semibold">Jane Ashley</p>
+              <p class="text-sm text-[#5f5f72]">Head of Design at DocuSign</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="flex flex-col justify-between min-w-[300px] max-w-[340px] text-left bg-white"
+          data-name="frog"
+        >
+          <div>
+            <h3 class="text-2xl font-extrabold text-[#050038] mb-4">frog</h3>
+            <p class="text-[#444] text-base leading-relaxed mb-6">
+              “As we used Miro we moved from skepticism to belief to innovation,
+              and now we have a tool that’s at the core of what we do and will
+              continue to extend into the future.”
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <img
+              src="img/profile3.png"
+              alt="Laura Baird"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-[#050038] text-sm font-semibold">Laura Baird</p>
+              <p class="text-sm text-[#5f5f72]">
+                Associate Design Director at frog
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section
+      class="bg-[#050038] text-white px-10 py-20 max-w-[1100px] mx-auto my-24 rounded-xl text-center"
+    >
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+        Join 45M+ users today
+      </h2>
+      <p class="text-base text-[#cccccc] mb-4">
+        Start for free — upgrade anytime.
+      </p>
+      <a href="#" class="text-sm text-[#b3b3ff] underline inline-block mb-6">
+        Joining as an organization? Contact Sales
+      </a>
+      <br />
+      <a
+        href="#"
+        class="inline-block bg-[#4262ff] hover:bg-[#2e4be5] text-white px-7 py-3 rounded-full font-medium text-base transition-all mt-4"
+      >
+        Sign up free →
+      </a>
+    </section>
 
+    <section class="bg-[#050038] text-white px-10 py-16">
+      <div class="max-w-[1200px] mx-auto flex flex-wrap gap-10 justify-between">
+        <!-- Product -->
+        <div class="min-w-[160px] flex flex-col">
+          <h4 class="text-base font-bold mb-3">Product</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Online whiteboard</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Apps & Integrations</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Templates</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Mirrorverse</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro Developer Platform</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro for Devices</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Security & Compliance</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Accessibility</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Changelog</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >View demo →</a
+              >
+            </li>
+          </ul>
+        </div>
 
+        <!-- Solutions -->
+        <div class="min-w-[160px] flex flex-col">
+          <h4 class="text-base font-bold mb-3">Solutions</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Meetings and Workshops</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Brainstorming & Ideation</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Agile Workflows</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Diagramming</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Research & Design</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Strategy & Planning</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Mind Map</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Concept Map</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Online Sticky Notes</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Flowchart</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Wireframing</a
+              >
+            </li>
+          </ul>
+        </div>
 
+        <!-- Resources -->
+        <div class="min-w-[160px] flex flex-col">
+          <h4 class="text-base font-bold mb-3">Resources</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro Academy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Status</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro Community</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro Professional Network</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro Experts Directory</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro Events</a
+              >
+            </li>
+          </ul>
+        </div>
 
+        <!-- Company -->
+        <div class="min-w-[160px] flex flex-col">
+          <h4 class="text-base font-bold mb-3">Company</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Miro in the News</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Customer Stories</a
+              >
+            </li>
+          </ul>
+        </div>
 
-<section class="join-section">
-  <h2>Join 45M+ users today</h2>
-  <p class="join-subtext">Start for free — upgrade anytime.</p>
-  <a href="#" class="join-link">Joining as an organization? Contact Sales</a>
-  <br>
-  <a href="#" class="join-button">Sign up free →</a>
-</section>
+        <!-- Plans and Pricing -->
+        <div class="min-w-[160px] flex flex-col">
+          <h4 class="text-base font-bold mb-3">Plans and Pricing</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Business</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Enterprise</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Consultants</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Education</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Startups</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >NPOs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-sm text-gray-300 hover:text-white"
+                >Contact sales →</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="footer-section">
-  <div class="footer-columns">
-    <div class="footer-column">
-      <h4>Product</h4>
-      <ul>
-        <li><a href="#">Online whiteboard</a></li>
-        <li><a href="#">Apps & Integrations</a></li>
-        <li><a href="#">Templates</a></li>
-        <li><a href="#">Mirrorverse</a></li>
-        <li><a href="#">Miro Developer Platform</a></li>
-        <li><a href="#">Miro for Devices</a></li>
-        <li><a href="#">Security & Compliance</a></li>
-        <li><a href="#">Accessibility</a></li>
-        <li><a href="#">Changelog</a></li>
-        <li><a href="#">View demo →</a></li>
-      </ul>
-    </div>
+    <footer
+      class="bg-[#05003b] text-white px-10 py-6 text-sm border-t border-white/20"
+    >
+      <div class="flex flex-wrap justify-between items-center gap-4">
+        <div class="flex gap-4">
+          <a href="#"><img src="img/s1.png" alt="Twitter" class="w-5" /></a>
+          <a href="#"><img src="img/s2.png" alt="Facebook" class="w-5" /></a>
+          <a href="#"><img src="img/s3.png" alt="LinkedIn" class="w-5" /></a>
+          <a href="#"><img src="img/s4.png" alt="Instagram" class="w-5" /></a>
+          <a href="#"><img src="img/s5.png" alt="YouTube" class="w-5" /></a>
+        </div>
 
-    <div class="footer-column">
-      <h4>Solutions</h4>
-      <ul>
-        <li><a href="#">Meetings and Workshops</a></li>
-        <li><a href="#">Brainstorming & Ideation</a></li>
-        <li><a href="#">Agile Workflows</a></li>
-        <li><a href="#">Diagramming</a></li>
-        <li><a href="#">Research & Design</a></li>
-        <li><a href="#">Strategy & Planning</a></li>
-        <li><a href="#">Mind Map</a></li>
-        <li><a href="#">Concept Map</a></li>
-        <li><a href="#">Online Sticky Notes</a></li>
-        <li><a href="#">Flowchart</a></li>
-        <li><a href="#">Wireframing</a></li>
-      </ul>
-    </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="flex items-center gap-1"
+            ><img src="img/s6.png" alt="Language" class="w-4" />EN</span
+          >
+          <span>© 2022 Miro</span>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Manage Cookies</a>
+        </div>
 
-    <div class="footer-column">
-      <h4>Resources</h4>
-      <ul>
-        <li><a href="#">Miro Academy</a></li>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Status</a></li>
-        <li><a href="#">Miro Community</a></li>
-        <li><a href="#">Miro Professional Network</a></li>
-        <li><a href="#">Miro Experts Directory</a></li>
-        <li><a href="#">Miro Events</a></li>
-      </ul>
-    </div>
+        <div class="flex gap-3">
+          <a href="#"
+            ><img
+              src="img/appstore.png"
+              alt="App Store"
+              class="h-10 rounded-md"
+          /></a>
+          <a href="#"
+            ><img
+              src="img/googleplay.png"
+              alt="Google Play"
+              class="h-10 rounded-md"
+          /></a>
+          <a href="#"
+            ><img
+              src="img/clip.png"
+              alt="Miro Logo"
+              class="h-10 bg-[#ffd02f] rounded-md p-1"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <div
+      id="toast-container"
+      class="fixed bottom-5 right-5 space-y-2 z-50"
+    ></div>
 
-    <div class="footer-column">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Miro in the News</a></li>
-        <li><a href="#">Customer Stories</a></li>
-      </ul>
-    </div>
+    <script src="miro.js"></script>
 
-    <div class="footer-column">
-      <h4>Plans and Pricing</h4>
-      <ul>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Enterprise</a></li>
-        <li><a href="#">Consultants</a></li>
-        <li><a href="#">Education</a></li>
-        <li><a href="#">Startups</a></li>
-        <li><a href="#">NPOs</a></li>
-        <li><a href="#">Contact sales →</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-
-<footer class="footer">
-  <div class="footer-content">
-    <div class="social-icons">
-      <a href="#"><img src="img/s1.png" alt="Twitter"></a>
-      <a href="#"><img src="img/s2.png" alt="Facebook"></a>
-      <a href="#"><img src="img/s3.png" alt="LinkedIn"></a>
-      <a href="#"><img src="img/s4.png" alt="Instagram"></a>
-      <a href="#"><img src="img/s5.png" alt="YouTube"></a>
-    </div>
-
-    <div class="language-copyright">
-      <span><img src="img/s6.png" alt="Language"> EN</span>
-      <span>© 2022 Miro</span>
-      <a href="#">Terms of Service</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Manage Cookies</a>
-    </div>
-
-    <div class="app-buttons">
-      <a href="#"><img src="img/appstore.png" alt="App Store"></a>
-      <a href="#"><img src="img/googleplay.png" alt="Google Play"></a>
-      <a href="#"><img src="img/clip.png" alt="Miro Logo" class="miro-logo"></a>
-    </div>
-  </div>
-</footer>
-
-<div id="toast-container"></div>
-<script src="miro.js"></script>
-
-
-
-
-
-
+    <div id="toast-container" class="fixed top-5 right-5 z-50 space-y-2"></div>
   </body>
 </html>
