@@ -60,55 +60,60 @@ document.addEventListener("DOMContentLoaded", () => {
 // Exercise 4: Company logos slider
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("companySlider");
-  const logos = track.querySelectorAll("img");
-  const logoCount = logos.length;
-  const gap = 40;
-
-  let currentIndex = 0;
-  const visibleCount = 5;
+  const gap = 60;
   const slideInterval = 3000;
+  let currentIndex = 0;
 
-  const slideWidth = logos[0].offsetWidth + gap;
+  const originalLogos = Array.from(track.children);
+  originalLogos.forEach((logo) => {
+    const clone = logo.cloneNode(true);
+    track.appendChild(clone);
+  });
 
-  function updateSlider() {
+  function getSlideWidth() {
+    const logo = track.querySelector("img");
+    return logo ? logo.offsetWidth + gap : 210;
+  }
+
+  function updateSlider(instant = false) {
+    const slideWidth = getSlideWidth();
     const translateX = -(slideWidth * currentIndex);
+
+    if (instant) {
+      track.style.transition = "none";
+    } else {
+      track.style.transition = "transform 0.5s ease-in-out";
+    }
+
     track.style.transform = `translateX(${translateX}px)`;
   }
 
   function slideRight() {
+    const total = track.children.length;
+    const half = total / 2;
+
     currentIndex++;
-    if (currentIndex > logoCount - visibleCount) {
-      currentIndex = 0;
-    }
     updateSlider();
+
+    if (currentIndex >= half) {
+      setTimeout(() => {
+        currentIndex = 0;
+        updateSlider(true);
+      }, 500);
+    }
   }
 
-  function slideLeft() {
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = logoCount - visibleCount;
-    }
-    updateSlider();
-  }
-
-  // Auto slide
-  setInterval(() => {
-    slideRight();
-  }, slideInterval);
-
-  // Eksporto funksionet për butonat
-  window.slideLeft = slideLeft;
-  window.slideRight = slideRight;
+  setInterval(slideRight, slideInterval);
 });
 
 // Exercise 5
 const companyData = [
   {
     id: "1",
-    name: "img/walmart-black3674.jpg",
+    name: "Walmart",
     description:
       "Walmart is a globally recognized company known for excellence in its industry.",
-    image: "img/walmart.png",
+    image: "img/logo1.png",
   },
   {
     id: "2",
@@ -298,10 +303,10 @@ document.addEventListener("DOMContentLoaded", () => {
         a.dataset.name.toLowerCase().localeCompare(b.dataset.name.toLowerCase())
       );
       sorted.forEach((card) => wrapper.appendChild(card));
-      sortBtn.textContent = "Reset";
+      sortBtn.textContent = "Sort by Company Name";
     } else {
       originalCards.forEach((card) => wrapper.appendChild(card));
-      sortBtn.textContent = "Sort";
+      sortBtn.textContent = "Sort by Company Name";
     }
 
     isSorted = !isSorted;
