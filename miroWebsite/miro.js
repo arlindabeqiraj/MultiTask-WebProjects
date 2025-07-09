@@ -30,3 +30,31 @@ function showLoading(button, duration = 2000, callback) {
     callback();
   }, duration);
 }
+
+// --- Sign up flow ---
+function isValidEmail(email) {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailInput = document.querySelector("input[type='email']");
+  const signUpBtn =
+    document.querySelector("button[type='submit']") ||
+    document.querySelector("button");
+
+  if (emailInput && signUpBtn) {
+    signUpBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+
+      showLoading(signUpBtn, 2500, () => {
+        if (isValidEmail(email)) {
+          showToast("Registration successful!", "success");
+        } else {
+          showToast("Invalid email address.", "error");
+        }
+      });
+    });
+  }
+});
