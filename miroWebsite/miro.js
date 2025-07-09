@@ -58,3 +58,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// --- Company logos slider ---
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("companySlider");
+  const gap = 40;
+  const visibleSlides = 6;
+  let currentIndex = 0;
+
+  const logos = Array.from(track.children);
+  logos.forEach((logo) => {
+    const clone = logo.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  const getSlideWidth = () => {
+    const logo = track.querySelector("img");
+    const logoWidth = logo.getBoundingClientRect().width;
+    return logoWidth + gap;
+  };
+
+  const updateSlider = (instant = false) => {
+    const slideWidth = getSlideWidth();
+    const translateX = -(slideWidth * currentIndex);
+    track.style.transition = instant ? "none" : "transform 0.5s ease-in-out";
+    track.style.transform = `translateX(${translateX}px)`;
+  };
+
+  const slideRight = () => {
+    const total = track.children.length;
+    const half = total / 2;
+
+    currentIndex++;
+    updateSlider();
+
+    if (currentIndex >= half) {
+      setTimeout(() => {
+        currentIndex = 0;
+        updateSlider(true);
+      }, 500);
+    }
+  };
+
+  setInterval(slideRight, 3000);
+});
