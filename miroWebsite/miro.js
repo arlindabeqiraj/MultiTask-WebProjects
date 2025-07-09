@@ -110,10 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const companyData = [
   {
     id: "1",
-    name: "Walmart",
+    name: "img/walmart-black3674.jpg",
     description:
       "Walmart is a globally recognized company known for excellence in its industry.",
-    image: "img/logo1.png",
+    image: "img/walmart.png",
   },
   {
     id: "2",
@@ -152,9 +152,9 @@ const companyData = [
   },
   {
     id: "7",
-    name: "FedEX",
+    name: "Starbucks",
     description:
-      "FedEx is a global logistics and delivery services company, known for its speed, reliability, and innovative shipping solutions.",
+      "Starbucks is a globally recognized company known for excellence in its industry.",
     image: "img/logo7.png",
   },
   {
@@ -303,10 +303,10 @@ document.addEventListener("DOMContentLoaded", () => {
         a.dataset.name.toLowerCase().localeCompare(b.dataset.name.toLowerCase())
       );
       sorted.forEach((card) => wrapper.appendChild(card));
-      sortBtn.textContent = "Sort by Company Name";
+      sortBtn.textContent = "Sort by company name";
     } else {
       originalCards.forEach((card) => wrapper.appendChild(card));
-      sortBtn.textContent = "Sort by Company Name";
+      sortBtn.textContent = "Sort by company name";
     }
 
     isSorted = !isSorted;
