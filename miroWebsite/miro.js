@@ -319,6 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // --- Review ---
 
 function isValidReview(review) {
@@ -489,3 +490,7 @@ setInterval(() => {
   index = (index + 1) % workImages.length;
   renderImages();
 }, 3000);
+
+  
+  
+
