@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Customer Reviews</title>
+    <link href="dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-[#1d1d1d] font-sans">
+    <div class="max-w-7xl mx-auto px-6 py-10">
+      <!-- Header + Button Centered -->
+      <div class="text-center mb-10">
+        <button
+          id="toggleFormBtn"
+          class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+        >
+          Add Review
+        </button>
+      </div>
+
+      <!-- Dynamic Reviews -->
+      <div
+        id="testimonialList"
+        class="flex flex-wrap justify-center gap-8 mt-10"
+      ></div>
+    </div>
+
+    <!-- Overlay + Review Form -->
+    <div
+      id="formOverlay"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <form
+        id="reviewForm"
+        class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg relative"
+      >
+        <button
+          id="closeFormBtn"
+          type="button"
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        >
+          ✕
+        </button>
+        <h2 class="text-xl font-bold mb-4 text-center text-[#1d1d1d]">
+          Add Your Review
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            class="px-4 py-2 border rounded-md w-full"
+            required
+          />
+          <input
+            type="text"
+            id="company"
+            placeholder="Company"
+            class="px-4 py-2 border rounded-md w-full"
+            required
+          />
+        </div>
+
+        <input
+          type="file"
+          id="image"
+          accept="image/*"
+          class="mt-4 px-4 py-2 border rounded-md w-full bg-white"
+          required
+        />
+
+        <textarea
+          id="comment"
+          placeholder="Your Comment"
+          rows="3"
+          class="mt-4 px-4 py-2 border rounded-md w-full"
+          required
+        ></textarea>
+
+        <input
+          type="number"
+          id="rating"
+          placeholder="Rating (1-5)"
+          min="1"
+          max="5"
+          class="mt-4 px-4 py-2 border rounded-md w-full"
+          required
+        />
+
+        <button
+          type="submit"
+          class="mt-6 w-full bg-[#4262ff] text-white py-2 rounded-md hover:bg-[#314acc] transition"
+        >
+          Submit Review
+        </button>
+      </form>
+    </div>
+
+    <!-- JS always last -->
+    <script src="miro.js"></script>
+  </body>
+</html>
