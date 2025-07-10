@@ -318,3 +318,151 @@ document.addEventListener("DOMContentLoaded", () => {
     isSorted = !isSorted;
   });
 });
+
+// --- Review ---
+// --- Validimi i review ---
+function isValidReview(review) {
+  return (
+    review.name.length > 1 &&
+    review.company.length > 1 &&
+    review.comment.length > 5 &&
+    review.rating >= 1 &&
+    review.rating <= 5
+  );
+}
+
+// --- Renderimi i yjeve në një container ---
+function renderStars(container) {
+  return function (rating) {
+    container.innerHTML = "";
+    const full = Math.floor(rating);
+    const hasHalf = rating % 1 >= 0.5;
+    const total = 5;
+
+    const star = (color) => {
+      const el = document.createElement("span");
+      el.textContent = "★";
+      el.style.color = color;
+      return el;
+    };
+
+    [...Array(full)].forEach(() => container.appendChild(star("#FFA534")));
+    if (hasHalf) container.appendChild(star("#FFD699"));
+    [...Array(total - full - (hasHalf ? 1 : 0))].forEach(() =>
+      container.appendChild(star("#d1d1d1"))
+    );
+  };
+}
+
+// --- Shfaq të gjitha reviews nga localStorage ---
+function loadReviews() {
+  const testimonialList = document.getElementById("testimonialList");
+  const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+  if (!testimonialList) return;
+
+  testimonialList.innerHTML = "";
+
+  reviews.forEach((review) => {
+    const card = document.createElement("div");
+    card.className =
+      "w-[300px] h-[350px] bg-white rounded-lg shadow-md p-6 flex flex-col justify-between";
+
+    card.innerHTML = `
+      <h3 class="text-xl font-bold mb-2">${review.company}</h3>
+      <p class="text-gray-700 text-sm mb-2">"${review.comment}"</p>
+      <div class="flex gap-1 text-xl mb-3" data-rating></div>
+      <div class="flex items-center gap-3">
+        <img src="${review.image}" alt="${review.name}" class="w-10 h-10 rounded-full object-cover" />
+        <div>
+          <p class="font-semibold text-sm">${review.name}</p>
+        </div>
+      </div>
+    `;
+
+    testimonialList.appendChild(card);
+    const ratingContainer = card.querySelector("[data-rating]");
+    renderStars(ratingContainer)(review.rating);
+  });
+}
+
+// --- Mesatarja e rating dhe renderimi në index.html ose diku tjetër ---
+function updateAverageRating() {
+  const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+  const avg = reviews.length
+    ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
+    : 0;
+
+  const container =
+    document.getElementById("rating-stars") ||
+    document.getElementById("average-stars");
+
+  if (!container) return;
+
+  renderStars(container)(avg);
+}
+
+// --- Setup pas DOMContentLoaded ---
+document.addEventListener("DOMContentLoaded", () => {
+  const reviewForm = document.getElementById("reviewForm");
+  const toggleFormBtn = document.getElementById("toggleFormBtn");
+  const formOverlay = document.getElementById("formOverlay");
+  const closeFormBtn = document.getElementById("closeFormBtn");
+
+  if (toggleFormBtn)
+    toggleFormBtn.addEventListener("click", () =>
+      formOverlay.classList.remove("hidden")
+    );
+
+  if (closeFormBtn)
+    closeFormBtn.addEventListener("click", () =>
+      formOverlay.classList.add("hidden")
+    );
+
+  if (reviewForm) {
+    reviewForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const fileInput = document.getElementById("image");
+      const file = fileInput.files[0];
+      if (!file) return alert("Please upload an image!");
+
+      const reader = new FileReader();
+      reader.onloadend = function () {
+        const base64Image = reader.result;
+
+        const newReview = {
+          name: document.getElementById("name").value.trim(),
+          company: document.getElementById("company").value.trim(),
+          comment: document.getElementById("comment").value.trim(),
+          rating: parseFloat(document.getElementById("rating").value),
+          image: base64Image,
+        };
+
+        if (!isValidReview(newReview)) {
+          alert("Please fill out the form correctly.");
+          return;
+        }
+
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push(newReview);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+
+        reviewForm.reset();
+        formOverlay.classList.add("hidden");
+        loadReviews();
+        updateAverageRating();
+      };
+
+      reader.readAsDataURL(file);
+    });
+  }
+
+  loadReviews();
+  updateAverageRating();
+
+  // Render yje për data-static-rating nëse ekziston (për static cards)
+  document.querySelectorAll("[data-static-rating]").forEach((el) => {
+    const rating = parseFloat(el.getAttribute("data-static-rating"));
+    renderStars(el)(rating);
+  });
+});
