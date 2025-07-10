@@ -319,8 +319,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // --- Review ---
-// --- Validimi i review ---
+
 function isValidReview(review) {
   return (
     review.name.length > 1 &&
@@ -331,7 +332,7 @@ function isValidReview(review) {
   );
 }
 
-// --- Renderimi i yjeve në një container ---
+
 function renderStars(container) {
   return function (rating) {
     container.innerHTML = "";
@@ -354,7 +355,7 @@ function renderStars(container) {
   };
 }
 
-// --- Shfaq të gjitha reviews nga localStorage ---
+
 function loadReviews() {
   const testimonialList = document.getElementById("testimonialList");
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
@@ -385,7 +386,7 @@ function loadReviews() {
   });
 }
 
-// --- Mesatarja e rating dhe renderimi në index.html ose diku tjetër ---
+
 function updateAverageRating() {
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
   const avg = reviews.length
@@ -401,7 +402,7 @@ function updateAverageRating() {
   renderStars(container)(avg);
 }
 
-// --- Setup pas DOMContentLoaded ---
+
 document.addEventListener("DOMContentLoaded", () => {
   const reviewForm = document.getElementById("reviewForm");
   const toggleFormBtn = document.getElementById("toggleFormBtn");
@@ -460,9 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadReviews();
   updateAverageRating();
 
-  // Render yje për data-static-rating nëse ekziston (për static cards)
+  
   document.querySelectorAll("[data-static-rating]").forEach((el) => {
     const rating = parseFloat(el.getAttribute("data-static-rating"));
     renderStars(el)(rating);
-  });
-});
