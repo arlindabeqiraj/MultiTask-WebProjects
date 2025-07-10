@@ -332,7 +332,6 @@ function isValidReview(review) {
   );
 }
 
-
 function renderStars(container) {
   return function (rating) {
     container.innerHTML = "";
@@ -354,7 +353,6 @@ function renderStars(container) {
     );
   };
 }
-
 
 function loadReviews() {
   const testimonialList = document.getElementById("testimonialList");
@@ -386,7 +384,6 @@ function loadReviews() {
   });
 }
 
-
 function updateAverageRating() {
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
   const avg = reviews.length
@@ -401,7 +398,6 @@ function updateAverageRating() {
 
   renderStars(container)(avg);
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const reviewForm = document.getElementById("reviewForm");
@@ -461,7 +457,40 @@ document.addEventListener("DOMContentLoaded", () => {
   loadReviews();
   updateAverageRating();
 
-  
   document.querySelectorAll("[data-static-rating]").forEach((el) => {
     const rating = parseFloat(el.getAttribute("data-static-rating"));
     renderStars(el)(rating);
+  });
+});
+
+// slider per work together
+const workImages = ["img/sl1.png", "img/sl2.png", "img/sl3.png"];
+
+const slider = document.getElementById("workSlider");
+
+let index = 0;
+
+const renderImages = () => {
+  slider.innerHTML = "";
+
+  for (let i = 0; i < 3; i++) {
+    const imgIndex = (index + i) % workImages.length;
+    const img = document.createElement("img");
+    img.src = workImages[imgIndex];
+    img.className =
+      "rounded-[20px] object-cover transition-all duration-500 " +
+      (i === 1 ? "w-52 h-80 shadow-lg" : "w-48 h-72 opacity-80");
+    slider.appendChild(img);
+  }
+};
+
+renderImages();
+
+setInterval(() => {
+  index = (index + 1) % workImages.length;
+  renderImages();
+}, 3000);
+
+  
+  
+
