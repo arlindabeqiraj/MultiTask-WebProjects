@@ -489,3 +489,75 @@ setInterval(() => {
   index = (index + 1) % workImages.length;
   renderImages();
 }, 3000);
+
+// built for the way you work
+const tabs = document.querySelectorAll(".tab-btn");
+const content = document.getElementById("tab-content");
+
+const data = {
+  brainstorming: {
+    title: "Brainstorming",
+    text: "Unleash creative ideas and build on them with the help of sticky notes, images, mind maps, videos, drawing capabilities — the list goes on.",
+    image: "img/brainstorm.png",
+  },
+  diagramming: {
+    title: "Diagramming",
+    text: "Visualize complex processes and systems with flowcharts, diagrams, and architecture maps.",
+    image: "img/diagram.png",
+  },
+  meetings: {
+    title: "Meetings & Workshops",
+    text: "Run engaging meetings and interactive workshops with built-in facilitation tools.",
+    image: "img/meeting.png",
+  },
+  scrum: {
+    title: "Scrum Events",
+    text: "Plan sprints, daily standups, and retrospectives visually and collaboratively.",
+    image: "img/scrum.png",
+  },
+  mapping: {
+    title: "Mapping",
+    text: "Map out journeys, systems, or user flows to understand and optimize better.",
+    image: "img/mapping.png",
+  },
+  research: {
+    title: "Research & Design",
+    text: "Collect insights, create personas, and build design systems — all in one space.",
+    image: "img/research.png",
+  },
+  planning: {
+    title: "Strategic Planning",
+    text: "Align teams and goals using timelines, roadmaps, and strategic frameworks.",
+    image: "img/planning.png",
+  },
+};
+
+function renderTab(key) {
+  const { title, text, image } = data[key];
+  content.innerHTML = `
+    <div class="flex-1 min-w-[280px]">
+      <p class="text-lg font-semibold text-[#050038] mb-4">${title}</p>
+      <p class="text-base text-[#5f5f72] mb-4">${text}</p>
+      <a href="#" class="text-[#4262ff] text-sm font-medium">Learn more →</a>
+    </div>
+    <div class="flex-1 min-w-[300px] text-center">
+      <img src="${image}" alt="${title}" class="w-[500px] h-auto mx-auto rounded-xl shadow-sm" />
+
+    </div>
+  `;
+}
+
+tabs.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tabs.forEach((b) => {
+      b.classList.remove("bg-[#eef1ff]", "text-[#4262ff]");
+      b.classList.add("bg-gray-100", "text-black");
+    });
+    btn.classList.remove("bg-gray-100", "text-black");
+    btn.classList.add("bg-[#eef1ff]", "text-[#4262ff]");
+    renderTab(btn.dataset.key);
+  });
+});
+
+// Default
+renderTab("brainstorming");
