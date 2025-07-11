@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./reviews.html", "./miro.js"],
+  content: [
+    "./index.html",
+    "./reviews.html",
+    "./miro.js",
+    "./pricing.html",
+    "./marketplace.html",
+    "./trust.html",
+  ],
   safelist: [
     "bg-green-500",
     "bg-red-500",
