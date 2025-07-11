@@ -319,6 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // --- Review ---
 
 function isValidReview(review) {
@@ -330,6 +331,7 @@ function isValidReview(review) {
     review.rating <= 5
   );
 }
+
 
 function renderStars(container) {
   return function (rating) {
@@ -352,6 +354,7 @@ function renderStars(container) {
     );
   };
 }
+
 
 function loadReviews() {
   const testimonialList = document.getElementById("testimonialList");
@@ -383,6 +386,7 @@ function loadReviews() {
   });
 }
 
+
 function updateAverageRating() {
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
   const avg = reviews.length
@@ -397,6 +401,7 @@ function updateAverageRating() {
 
   renderStars(container)(avg);
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const reviewForm = document.getElementById("reviewForm");
@@ -455,6 +460,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadReviews();
   updateAverageRating();
+
 
   document.querySelectorAll("[data-static-rating]").forEach((el) => {
     const rating = parseFloat(el.getAttribute("data-static-rating"));
@@ -561,3 +567,5 @@ tabs.forEach((btn) => {
 
 // Default
 renderTab("brainstorming");
+
+
