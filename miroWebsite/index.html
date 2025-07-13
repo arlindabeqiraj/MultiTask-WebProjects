@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miro Landing Clone</title>
+    <title>Miro Website</title>
     <link href="dist/output.css" rel="stylesheet" />
   </head>
   <body class="bg-white text-[#1d1d1d] font-sans">
@@ -63,9 +63,20 @@
           Collaborate with your team within minutes
         </p>
         <div
-          class="mt-8 flex items-center gap-3 bg-[#f7f7fb] px-5 py-3 rounded-lg w-fit text-sm text-[#333]"
+          class="bg-[#ffffff] px-6 py-2 mt-4 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 w-full max-w-[500px]"
         >
-          <img src="img/review2.png" alt="" class="h-10" />
+          <div class="flex flex-col items-start">
+            <div id="rating-stars" class="flex gap-1 text-xl mb-1"></div>
+
+            <p class="text-sm text-[#1d1d1d] font-medium">
+              Based on 3+ reviews:
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <img src="img/reviews.png" alt="G2" class="h-6" />
+            <span class="font-semibold text-[#050038]">GetApp</span>
+            <span class="font-semibold text-[#050038]">Capterra</span>
+          </div>
         </div>
       </div>
       <div class="flex-[1.3] flex justify-end">
@@ -100,7 +111,10 @@
             Our free plan gives you unlimited team members, 3 boards, and 300+
             expert-made templates. Signing up with your work email lets you
             bring in your team faster. See our
-            <a href="#" class="text-[#4568fd] underline">pricing plans</a>
+            <a href="pricing.html" class="text-[#4568fd] underline"
+              >pricing plans</a
+            >
+
             for more features.
           </p>
         </div>
@@ -111,7 +125,10 @@
           <p class="text-[#444] leading-relaxed mb-2">
             Miro has 100+ powerful integrations with tools you already use like
             G Suite, Slack, and Jira. View the full list in our
-            <a href="#" class="text-[#4568fd] underline">Marketplace</a>.
+            <a href="marketplace.html" class="text-[#4568fd] underline"
+              >Marketplace</a
+            >
+            .
           </p>
         </div>
         <div class="flex-1 min-w-[280px] max-w-sm">
@@ -122,7 +139,9 @@
             We treat your data like you would — with the utmost care. We follow
             industry-leading security standards and give you tools to protect
             intellectual property. Learn more at our
-            <a href="#" class="text-[#4568fd] underline">Trust Center</a>.
+            <a href="trust.html" class="text-[#4568fd] underline"
+              >Trust Center</a
+            >
           </p>
         </div>
       </div>
@@ -133,6 +152,54 @@
       >
         Sign up free →
       </a>
+    </section>
+
+    <section class="w-full py-16">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6"
+      >
+        <div class="w-full md:w-[40%] space-y-6">
+          <h2 class="text-4xl font-bold text-[#050038] leading-snug">
+            Work together,<br />
+            wherever you work
+          </h2>
+          <p class="text-[#5F5C80] text-lg">
+            In the office, remote, or a mix of the two, with Miro, your team can
+            connect, collaborate, and co-create in one space no matter where you
+            are.
+          </p>
+          <a
+            href="#"
+            class="text-[#4262FF] font-medium inline-flex items-center gap-1 hover:underline"
+          >
+            Learn more
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="w-full md:w-[60%] relative overflow-hidden">
+          <div
+            id="workSlider"
+            class="flex gap-4 transition-all duration-500 ease-in-out"
+          ></div>
+
+          <div class="flex justify-center gap-2 mt-6">
+            <img
+              src="img/profile1.png"
+              class="w-7 h-7 rounded-full border-2 border-white"
+            />
+            <img
+              src="img/profile2.png"
+              class="w-7 h-7 rounded-full border-2 border-white"
+            />
+            <span
+              class="w-7 h-7 rounded-full bg-[#F5F5F7] text-[#050038] text-xs flex items-center justify-center font-bold"
+            >
+              +98
+            </span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section
@@ -183,64 +250,52 @@
         Built for the way you work
       </h2>
 
-      <div class="flex flex-wrap justify-center gap-3 mb-12">
+      <div class="flex flex-wrap justify-center gap-3 mb-12" id="tabs">
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-[#eef1ff] text-[#4262ff] text-sm font-medium"
+          data-key="brainstorming"
+          class="tab-btn px-4 py-2 border border-gray-300 rounded-full bg-[#eef1ff] text-[#4262ff] text-sm font-medium"
         >
           Brainstorming
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+          data-key="diagramming"
+          class="tab-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
         >
           Diagramming
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+          data-key="meetings"
+          class="tab-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
         >
           Meetings & Workshops
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+          data-key="scrum"
+          class="tab-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
         >
           Scrum Events
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+          data-key="mapping"
+          class="tab-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
         >
           Mapping
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+          data-key="research"
+          class="tab-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
         >
           Research & Design
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
+          data-key="planning"
+          class="tab-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium"
         >
           Strategic Planning
         </button>
       </div>
 
-      <div class="flex flex-wrap gap-16 items-start">
-        <div class="flex-1 min-w-[280px]">
-          <p class="text-lg font-semibold text-[#050038] mb-4">Brainstorming</p>
-          <p class="text-base text-[#5f5f72] mb-4">
-            Unleash creative ideas and build on them with the help of sticky
-            notes, images, mind maps, videos, drawing capabilities — the list
-            goes on.
-          </p>
-          <a href="#" class="text-[#4262ff] text-sm font-medium"
-            >Learn more →</a
-          >
-        </div>
-        <div class="flex-1 min-w-[300px] text-center">
-          <img
-            src="img/brainstorm.png"
-            alt="Brainstorming"
-            class="max-w-full h-auto"
-          />
-        </div>
-      </div>
+      <div class="flex flex-wrap gap-16 items-start" id="tab-content"></div>
     </section>
 
     <section class="px-10 py-20 max-w-[1100px] mx-auto">
@@ -397,7 +452,7 @@
         Loved by the world’s best teams
       </h2>
       <a
-        href="#"
+        href="reviews.html"
         class="inline-block border border-[#4262ff] text-[#4262ff] px-6 py-2 rounded-full text-base font-medium mb-10 hover:bg-[#4262ff] hover:text-white transition-all"
       >
         See all customer stories →
@@ -414,7 +469,6 @@
         id="testimonialWrapper"
         class="flex flex-wrap justify-center gap-10 max-w-[1200px] mx-auto"
       >
-        <!-- Single Testimonial -->
         <div
           class="flex flex-col justify-between min-w-[300px] max-w-[340px] text-left bg-white"
           data-name="vmware"
@@ -443,7 +497,6 @@
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
         <div
           class="flex flex-col justify-between min-w-[300px] max-w-[340px] text-left bg-white"
           data-name="DocuSign"
@@ -524,7 +577,6 @@
 
     <section class="bg-[#050038] text-white px-10 py-16">
       <div class="max-w-[1200px] mx-auto flex flex-wrap gap-10 justify-between">
-        <!-- Product -->
         <div class="min-w-[160px] flex flex-col">
           <h4 class="text-base font-bold mb-3">Product</h4>
           <ul class="space-y-2">
@@ -581,7 +633,6 @@
           </ul>
         </div>
 
-        <!-- Solutions -->
         <div class="min-w-[160px] flex flex-col">
           <h4 class="text-base font-bold mb-3">Solutions</h4>
           <ul class="space-y-2">
@@ -643,7 +694,6 @@
           </ul>
         </div>
 
-        <!-- Resources -->
         <div class="min-w-[160px] flex flex-col">
           <h4 class="text-base font-bold mb-3">Resources</h4>
           <ul class="space-y-2">
@@ -690,7 +740,6 @@
           </ul>
         </div>
 
-        <!-- Company -->
         <div class="min-w-[160px] flex flex-col">
           <h4 class="text-base font-bold mb-3">Company</h4>
           <ul class="space-y-2">
@@ -717,7 +766,6 @@
           </ul>
         </div>
 
-        <!-- Plans and Pricing -->
         <div class="min-w-[160px] flex flex-col">
           <h4 class="text-base font-bold mb-3">Plans and Pricing</h4>
           <ul class="space-y-2">
@@ -810,10 +858,6 @@
         </div>
       </div>
     </footer>
-    <div
-      id="toast-container"
-      class="fixed bottom-5 right-5 space-y-2 z-50"
-    ></div>
 
     <script src="miro.js"></script>
 

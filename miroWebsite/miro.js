@@ -77,13 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const visibleSlides = 6;
   let currentIndex = 0;
 
-  // Ketu i ke te gjitha logot ne array
+  
   const logoSources = Array.from(
     { length: 20 },
     (_, i) => `img/logo${i + 1}.png`
   );
 
-  // Shtimi i logove në DOM
+  
   logoSources.forEach((src, index) => {
     const img = document.createElement("img");
     img.src = src;
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     track.appendChild(img);
   });
 
-  // Duplikimi për infinite scroll
+ 
   const logos = Array.from(track.children);
   logos.forEach((logo) => {
     const clone = logo.cloneNode(true);
