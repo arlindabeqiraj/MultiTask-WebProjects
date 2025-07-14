@@ -77,6 +77,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const visibleSlides = 6;
   let currentIndex = 0;
 
+  
+  const logoSources = Array.from(
+    { length: 20 },
+    (_, i) => `img/logo${i + 1}.png`
+  );
+
+  
+  logoSources.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.dataset.id = index + 1;
+    img.className =
+      "w-[140px] h-[80px] object-contain flex-shrink-0 opacity-95";
+    track.appendChild(img);
+  });
+
+ 
   const logos = Array.from(track.children);
   logos.forEach((logo) => {
     const clone = logo.cloneNode(true);
@@ -319,7 +336,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 // --- Review ---
 
 function isValidReview(review) {
@@ -331,7 +347,6 @@ function isValidReview(review) {
     review.rating <= 5
   );
 }
-
 
 function renderStars(container) {
   return function (rating) {
@@ -354,7 +369,6 @@ function renderStars(container) {
     );
   };
 }
-
 
 function loadReviews() {
   const testimonialList = document.getElementById("testimonialList");
@@ -386,7 +400,6 @@ function loadReviews() {
   });
 }
 
-
 function updateAverageRating() {
   const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
   const avg = reviews.length
@@ -401,7 +414,6 @@ function updateAverageRating() {
 
   renderStars(container)(avg);
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const reviewForm = document.getElementById("reviewForm");
@@ -460,7 +472,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadReviews();
   updateAverageRating();
-
 
   document.querySelectorAll("[data-static-rating]").forEach((el) => {
     const rating = parseFloat(el.getAttribute("data-static-rating"));
@@ -567,5 +578,3 @@ tabs.forEach((btn) => {
 
 // Default
 renderTab("brainstorming");
-
-
