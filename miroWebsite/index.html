@@ -90,10 +90,8 @@
 
     <section class="w-full py-24 px-10 text-center bg-white text-gray-500">
       <p class="text-lg font-medium mb-12">Trusted by 45M+ users</p>
-      <div class="slider-wrapper mx-auto overflow-hidden w-[1040px]">
-        <div id="companySlider" class="flex gap-[40px] w-max">
-          <!-- Logot do gjenerohen nga JS -->
-        </div>
+      <div class="slider-wrapper mx-auto overflow-hidden max-w-[1040px] w-full">
+        <div id="companySlider" class="flex gap-[40px] w-max"></div>
       </div>
     </section>
 
@@ -180,7 +178,10 @@
         <div class="w-full md:w-[60%] relative overflow-hidden">
           <div
             id="workSlider"
+            -
             class="flex gap-4 transition-all duration-500 ease-in-out"
+            +
+            class="flex justify-center items-end gap-6 h-[340px]"
           ></div>
 
           <div class="flex justify-center gap-2 mt-6">
@@ -859,7 +860,7 @@
       </div>
     </footer>
 
-    <script src="miro.js"></script>
+    <script type="module" src="js/main.js"></script>
 
     <div id="toast-container" class="fixed top-5 right-5 z-50 space-y-2"></div>
   </body>
