@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "name": "Walmart",
+    "description": "Walmart is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo1.png"
+  },
+  {
+    "id": "2",
+    "name": "Cisco",
+    "description": "Cisco is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo2.png"
+  },
+  {
+    "id": "3",
+    "name": "Volvo",
+    "description": "Volvo is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo3.png"
+  },
+  {
+    "id": "4",
+    "name": "Deloitte",
+    "description": "Deloitte is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo4.png"
+  },
+  {
+    "id": "5",
+    "name": "Okta",
+    "description": "Okta is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo5.png"
+  },
+  {
+    "id": "6",
+    "name": "Sanofi",
+    "description": "Sanofi is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo6.png"
+  },
+  {
+    "id": "7",
+    "name": "Starbucks",
+    "description": "Starbucks is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo7.png"
+  },
+  {
+    "id": "8",
+    "name": "ConocoPhillips",
+    "description": "ConocoPhillips is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo8.png"
+  },
+  {
+    "id": "9",
+    "name": "Visa",
+    "description": "Visa is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo9.png"
+  },
+  {
+    "id": "10",
+    "name": "JPMorganChase",
+    "description": "JPMorganChase is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo10.png"
+  },
+  {
+    "id": "11",
+    "name": "Broadcom",
+    "description": "Broadcom is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo11.png"
+  },
+  {
+    "id": "12",
+    "name": "Loreal",
+    "description": "Loreal is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo12.png"
+  },
+  {
+    "id": "13",
+    "name": "Hermes",
+    "description": "Hermes is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo13.png"
+  },
+  {
+    "id": "14",
+    "name": "Intel",
+    "description": "Intel is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo14.png"
+  },
+  {
+    "id": "15",
+    "name": "ABInBev",
+    "description": "ABInBev is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo15.png"
+  },
+  {
+    "id": "16",
+    "name": "Accenture",
+    "description": "Accenture is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo16.png"
+  },
+  {
+    "id": "17",
+    "name": "Comcast",
+    "description": "Comcast is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo17.png"
+  },
+  {
+    "id": "18",
+    "name": "AMD",
+    "description": "AMD is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo18.png"
+  },
+  {
+    "id": "19",
+    "name": "Netflix",
+    "description": "Netflix is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo19.png"
+  },
+  {
+    "id": "20",
+    "name": "Siemens",
+    "description": "Siemens is a globally recognized company known for excellence in its industry.",
+    "image": "img/logo20.png"
+  }
+]
