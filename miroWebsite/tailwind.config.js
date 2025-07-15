@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./reviews.html",
-    "./miro.js",
+    "./js/**/*.js",
     "./pricing.html",
     "./marketplace.html",
     "./trust.html",
