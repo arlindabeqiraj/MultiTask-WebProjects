@@ -304,82 +304,58 @@
         Built for all kinds of teams
       </h2>
 
-      <div class="flex flex-nowrap justify-between gap-2 mb-12 overflow-x-auto">
+      <div
+        class="flex flex-nowrap justify-between gap-2 mb-12 overflow-x-auto"
+        id="team-tabs"
+      >
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-[#eef1ff] text-[#4262ff] text-sm font-medium flex-1 min-w-max text-center"
+          data-key="ux"
+          class="team-btn px-4 py-2 border border-gray-300 rounded-full bg-[#eef1ff] text-[#4262ff] text-sm font-medium min-w-max text-center"
         >
           UX & Design
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+          data-key="marketing"
+          class="team-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium min-w-max text-center"
         >
           Marketing
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+          data-key="pm"
+          class="team-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium min-w-max text-center"
         >
           Product Management
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+          data-key="engineering"
+          class="team-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium min-w-max text-center"
         >
           Engineering
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+          data-key="consultants"
+          class="team-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium min-w-max text-center"
         >
           Consultants
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+          data-key="agile"
+          class="team-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium min-w-max text-center"
         >
           Agile Coaches
         </button>
         <button
-          class="px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium flex-1 min-w-max text-center"
+          data-key="sales"
+          class="team-btn px-4 py-2 border border-gray-300 rounded-full bg-gray-100 text-sm font-medium min-w-max text-center"
         >
           Sales
         </button>
       </div>
 
-      <div class="flex flex-wrap justify-between gap-16 items-start">
-        <div class="flex-1 min-w-[280px]">
-          <ul class="space-y-3 mb-6">
-            <li
-              class="relative pl-6 text-[16px] text-[#5f5f72] before:content-['✔'] before:absolute before:left-0 before:text-[#4262ff]"
-            >
-              Build low-fi wireframes
-            </li>
-            <li
-              class="relative pl-6 text-[16px] text-[#5f5f72] before:content-['✔'] before:absolute before:left-0 before:text-[#4262ff]"
-            >
-              Involve stakeholders in the design process
-            </li>
-            <li
-              class="relative pl-6 text-[16px] text-[#5f5f72] before:content-['✔'] before:absolute before:left-0 before:text-[#4262ff]"
-            >
-              Run engaging design workshops
-            </li>
-          </ul>
-
-          <a href="#" class="text-[#4262ff] text-sm font-medium hover:underline"
-            >Learn more →</a
-          >
-
-          <div class="mt-6 text-sm text-gray-600">
-            <span class="block mb-2">Integrate your favorite tools</span>
-            <img src="img/tools.png" alt="Tool Logos" class="max-w-[160px]" />
-          </div>
-        </div>
-
-        <div class="flex-1 min-w-[300px] text-center">
-          <img
-            src="img/teams.png"
-            alt="Team Collaboration Image"
-            class="max-w-full h-auto rounded-lg shadow-md"
-          />
-        </div>
-      </div>
+      <div
+        id="team-content"
+        class="flex flex-wrap justify-between gap-16 items-start animate-fade-in"
+      ></div>
     </section>
 
     <section class="bg-[#ffd82f] text-center px-10 py-24">

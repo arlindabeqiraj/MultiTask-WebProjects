@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ux",
+    "title": "UX & Design",
+    "checklist": [
+      "Build low-fi wireframes",
+      "Involve stakeholders in the design process",
+      "Run engaging design workshops"
+    ],
+    "image": "img/teams.png",
+    "tools": true
+  },
+  {
+    "id": "marketing",
+    "title": "Marketing",
+    "checklist": [
+      "Align campaign goals visually",
+      "Collaborate on brand messaging",
+      "Create assets with cross-team input"
+    ],
+    "image": "img/marketing.png",
+    "tools": true
+  },
+  {
+    "id": "pm",
+    "title": "Product Management",
+    "checklist": [
+      "Track product roadmap progress",
+      "Prioritize features together",
+      "Gather feedback in one place"
+    ],
+    "image": "img/product.png",
+    "tools": false
+  },
+  {
+    "id": "engineering",
+    "title": "Engineering",
+    "checklist": [
+      "Map out architecture diagrams",
+      "Clarify specs visually",
+      "Connect tasks with planning tools"
+    ],
+    "image": "img/engineering",
+    "tools": false
+  },
+  {
+    "id": "consultants",
+    "title": "Consultants",
+    "checklist": [
+      "Build client workspaces fast",
+      "Present concepts with clarity",
+      "Co-create solutions in real-time"
+    ],
+    "image": "img/consultant.png",
+    "tools": true
+  },
+  {
+    "id": "agile",
+    "title": "Agile Coaches",
+    "checklist": [
+      "Facilitate retrospectives",
+      "Run sprint planning visually",
+      "Keep teams aligned with boards"
+    ],
+    "image": "img/agile.jpg",
+    "tools": false
+  },
+  {
+    "id": "sales",
+    "title": "Sales",
+    "checklist": [
+      "Map client needs visually",
+      "Create pre-sale workshops",
+      "Show solutions, not just slides"
+    ],
+    "image": "img/sales.png",
+    "tools": true
+  }
+]

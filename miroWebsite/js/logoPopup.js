@@ -24,7 +24,7 @@ export async function initLogoPopup() {
 
   let companies = [];
   try {
-    const res = await fetch("./js/companies.json");
+    const res = await fetch("./data/companies.json");
     companies = await res.json();
   } catch (err) {
     console.error("Failed to fetch company data:", err);
