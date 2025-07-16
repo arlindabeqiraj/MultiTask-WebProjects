@@ -6,6 +6,7 @@ import { initReviewForm } from "./review.js";
 import { initTabs } from "./work.js";
 import { initWorkSlider } from "./workSlider.js";
 import { initTeamTabs } from "./teams.js";
+import { initReports } from "./reports.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initSignUp();
@@ -16,4 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initTabs();
   initWorkSlider();
   initTeamTabs();
+  initReports();
 });
